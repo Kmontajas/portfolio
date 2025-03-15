@@ -1,72 +1,258 @@
-body {
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: hsl(308, 61%, 35%);
-    color: #333;
-    text-align: center;
 }
 
-header {
-    background-color: #0073e6;
+body {
     color: white;
-    padding: 20px;
+    position: relative;
+    overflow-x: hidden;
 }
 
-header img {
-    display: block;
-    margin: 0 auto 10px;
-    color: #333;
-    border: 3px solid rgb(27, 75, 112);
-
+/* Moving Background */
+.animated-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(120deg, black, #8B0000);
+    background-size: 300% 300%;
+    animation: movingBackground 10s infinite linear;
+    z-index: -1;
 }
 
-h1 {
-    margin: 0;
+@keyframes movingBackground {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    background: rgba(0, 0, 0, 0.6);
+}
+
+.logo {
     font-size: 24px;
-
-
-section {
-    background: rgb(123, 53, 53);
-    margin: 20px auto;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    width: 80%;
-    max-width: 800px;
 }
 
-h2 {
-    color: #e60013;
-}
-
-ul {
+nav ul {
+    display: flex;
     list-style: none;
-    padding: 0;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #FF6347; /* Softer red hover effect */
+}
+
+/* Centered Hero Section */
+.hero {
     display: flex;
     justify-content: center;
-    gap: 15px;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    height: 70vh;
 }
 
-ul li img {
-    width: 50px;
-    height: auto;
-}
-
-footer {
-    background-color: #0073e6;
+.hero-content h1 {
+    font-size: 40px;
     color: white;
-    padding: 10px;
+}
+
+.hero-content h2 {
+    font-size: 28px;
+    color: #FF6347;
+    margin-bottom: 10px;
+}
+
+.hero-content p {
+    max-width: 500px;
+    color: white;
+}
+
+/* Circular Profile Image */
+.hero-image img {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    border: 5px solid white;
+    box-shadow: 0 0 15px rgba(255, 99, 71, 0.8);
+    object-fit: cover;
     margin-top: 20px;
 }
 
-footer a {
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
+/* About Me Section (Hidden by Default) */
+#about {
+    display: none;
+    text-align: center;
+    padding: 50px;
+    background: rgba(0, 0, 0, 0.8);
+    margin-top: 50px;
 }
 
-footer a:hover {
-    text-decoration: underline;
+#about h2 {
+    font-size: 28px;
+    color: white;
 }
+
+#about p {
+    color: white;
+    max-width: 600px;
+    margin: auto;
+    line-height: 1.6;
+}
+
+/* Contact Section */
+#contact {
+    text-align: center;
+    padding: 50px;
+    background: rgba(0, 0, 0, 0.8);
+    margin-top: 50px;
+}
+
+#contact h2 {
+    font-size: 28px;
+    color: white;
+}
+
+.contact-links {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.contact-links a {
+    text-decoration: none;
+    color: #FF6347;
+    font-size: 20px;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.contact-links a:hover {
+    color: white;
+}
+
+/* Fix for Centering the Navigation Menu */
+header {
+    display: flex;
+    justify-content: center; /* Center header content */
+    align-items: center;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.9);
+    padding: 15px 0;
+}
+
+/* Center the Navigation Bar */
+nav {
+    width: 100%;
+    display: flex;
+    justify-content: center; /* Ensures nav menu is in the center */
+    align-items: center;
+}
+
+/* Center the Navigation Items */
+nav ul {
+    display: flex;
+    justify-content: center; /* Centers items properly */
+    align-items: center;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    gap: 40px; /* Adjusted spacing between items */
+}
+
+/* Ensure Proper Alignment */
+nav ul li {
+    display: inline-block;
+}
+
+/* Styling for Navigation Links */
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+    font-size: 18px;
+    transition: color 0.3s;
+}
+
+/* Highlight Effect on Hover */
+nav ul li a:hover, .active {
+    color: #FF6347;
+}
+
+    
+
+
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .hero {
+        flex-direction: column;
+    }
+
+    .hero-image img {
+        width: 200px;
+        height: 200px;
+    } /* properly close */
+
+/* Enable smooth scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Programming Logos Section */
+#logos {
+    text-align: center;
+    padding: 50px;
+    background: rgba(0, 0, 0, 0.8);
+}
+
+#logos h2 {
+    font-size: 28px;
+    color: #FF6347;
+    margin-bottom: 20px;
+}
+
+.logo-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.logo-container img {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+    border-radius: 10px;
+    background: white;
+    padding: 10px;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+    transition: transform 0.3s ease-in-out;
+}
+
+.logo-container img:hover {
+    transform: scale(1.1);
 }

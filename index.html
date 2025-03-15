@@ -1,46 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-10">
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kristine Mae Montajas - Portfolio</title>
-    <link rel="stylesheet" href="css/style.css">
-    <style>
-        body {
-            background-color: rgb(156, 200, 77);
-        }
-    </style>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <div class="animated-bg"></div> <!-- Moving Background -->
+
     <header>
-        <img src="Picture.jpg" alt="Kristine Mae Montajas" style="width:100px; height:auto; border-radius:50%;">
-        <h1>Kristine Mae Montajas</h1>
+        <nav>
+            <ul id="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Me</a></li>
+                <li><a href="#">Projects</a></li>
+                <li><a href="#">Skills</a></li>
+                <li><a href="#logos">Logo's</a></li> <!-- Directly links to the section -->
+                <li><a href="resume.html">Resume</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
     </header>
-    
-    <section id="about">
-        <h2>About Me</h2>
-        <img src="Resume.jpg" alt="Resume" style="max-width: 500%; height: auto; margin-top: 20px;">
-        <p>I am a hardworking and flexible person who is always eager to learn new things. I love watching sunsets as they give me a sense of peace and inspiration. Cooking is one of my favorite pastimes, as it allows me to express my creativity. I also enjoy playing badminton, which keeps me active and healthy. I believe that perseverance and dedication are keys to achieving success in life.</p>
-        <p>My professional aspiration is to become a flight attendant, where I can explore the world while providing excellent service to passengers. I am passionate about ensuring comfort and safety for travelers, making their journey memorable. This career allows me to meet people from different cultures, enhancing my communication and adaptability skills. I strive to grow in this field and provide top-notch service to passengers worldwide.</p>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Hi, I'm Kristine Mae Montajas</h1>
+            <h2>Professional IT Web Developer</h2>
+            <p>I am a dedicated IT Web Developer with a passion for crafting user friendly and innovative websites.  
+               My expertise lies in front end development, UI/UX design, and full stack web solutions.  
+               I strive to create seamless digital experiences that drive success.</p>
+        </div>
+        <div class="hero-image">
+            <img src="images/K.jpg" alt="Kristine Mae Montajas">
+        </div>
     </section>
-    
-    <section id="tech-stack">
-        <h2>Tech Stack</h2>
-        <p>Here are some technologies I have learned while studying:</p>
-        <ul>
-            <li><img src="html.jpg" alt="htmlL"></li>s
-            <li><img src="c.png" alt="C"></li>
-            <li><img src="Python.jpg" alt="Python"></li>
-        </ul>
+
+    <!-- Programming Logos Section -->
+    <section id="logos">
+        <h2>Programming Technologies</h2>
+        <div class="logo-container">
+            <img src="images/Css.jpg" alt="CSS Logo">
+            <img src="images/html.jpg" alt="HTML Logo">
+            <img src="images/Java.jpg" alt="Java Logo">
+            <img src="images/Python.jpg" alt="Python Logo">
+            <img src="images/C.jpg" alt="C Logo">
+        </div>
     </section>
-    
-    <footer>
-        <p>Find me on <a href="https://github.com/kristinemaemontajas">GitHub</a> 
-        <p>Find me on <a href="https://www.facebook.com/share/15tku2jpnV/">Facebook</a> 
-        <p>Find me on <a href="https://www.instagram.com/montajaskristinemae?igsh=MWQweGxtOXFtNXA5Ng==">Instagram</a>
-    
+
+    <section id="contact">
+        <h2>Contact Me</h2>
+        <div class="contact-links">
+            <a href="https://github.com/Kmontajas/Montajas_" target="_blank">GitHub</a>
+            <a href="https://linkedin.com/in/yourlinkedin" target="_blank">LinkedIn</a>
+        </div>
+    </section>
+
     <script src="script.js"></script>
 </body>
 </html>
+
+
 
