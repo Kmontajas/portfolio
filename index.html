@@ -1,64 +1,133 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kristine Mae Montajas - Portfolio</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Kristine</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="animated-bg"></div> <!-- Moving Background -->
 
-    <header>
-        <nav>
-            <ul id="nav-menu">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About Me</a></li>
-                <li><a href="#">Projects</a></li>
-                <li><a href="#">Skills</a></li>
-                <li><a href="#logos">Logo's</a></li> <!-- Directly links to the section -->
-                <li><a href="resume.html">Resume</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
+<header>
+  <div class="navbar">
+    <div class="logo"></div>
+    <nav>
+      <ul>
+        <li><a href="#hero" data-target="hero">Home</a></li>
+        <li><a href="#about" data-target="about">About Me</a></li>
+        <li><a href="#resume" data-target="resume">Resume</a></li>
+        <li><a href="#logos" data-target="logos">Programming</a></li>
+        <li><a href="#pages" data-target="pages">Pages</a></li>
+        <li><a href="#contact" data-target="contact" class="contact-btn">Contact Me</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
 
-    <section class="hero">
-        <div class="hero-content">
-            <h1>Hi, I'm Kristine Mae Montajas</h1>
-            <h2>Professional IT Web Developer</h2>
-            <p>I am a dedicated IT Web Developer with a passion for crafting user friendly and innovative websites.  
-               My expertise lies in front end development, UI/UX design, and full stack web solutions.  
-               I strive to create seamless digital experiences that drive success.</p>
-        </div>
-        <div class="hero-image">
-            <img src="images/K.jpg" alt="Kristine Mae Montajas">
-        </div>
-    </section>
+<main>
+  <section class="page-section" id="hero">
+    <div class="hero-content">
+      <h1><span class="highlight">Hi! </span>Welcome to my porfolio,I'm kristine Mae</h1>
+      <p>Together we the people achieve more than any single person could ever do alone.</p>
+      <a href="#about" class="btn" data-target="about">GETTING STARTED</a>
+    </div>
+    <div class="hero-image">
+      <img src="images/K.jpg" alt="Profile Image">
+    </div>
+  </section>
 
-    <!-- Programming Logos Section -->
-    <section id="logos">
-        <h2>Programming Technologies</h2>
-        <div class="logo-container">
-            <img src="images/Css.jpg" alt="CSS Logo">
-            <img src="images/html.jpg" alt="HTML Logo">
-            <img src="images/Java.jpg" alt="Java Logo">
-            <img src="images/Python.jpg" alt="Python Logo">
-            <img src="images/C.jpg" alt="C Logo">
-        </div>
-    </section>
+  <section class="page-section" id="about">
+    <h2>About Me</h2>
+    <p>Hello! I'm Kristine Mae Montajas, a passionate developer and designer. I love bringing creative ideas to life through clean and responsive code.</p>
+  </section>
 
-    <section id="contact">
-        <h2>Contact Me</h2>
-        <div class="contact-links">
-            <a href="https://github.com/Kmontajas/Montajas_" target="_blank">GitHub</a>
-            <a href="https://linkedin.com/in/yourlinkedin" target="_blank">LinkedIn</a>
-        </div>
-    </section>
+  <section class="page-section" id="resume">
+    <h2 style="text-align:center; color: #00ff6a; font-size: 32px; margin-bottom: 40px;">Resume</h2>
+    <div style="max-width: 900px; margin: auto; color: #ffffff; line-height: 1.6; font-size: 16px;">
+      <p>I was an IT student before and the reason as to why I decided not to pursue is because of financial reason. I may not be the smartest person in the room, but I can guarantee that I am a very hardworking person. I worked for 3 years in a small store as a cashier.</p>
 
-    <script src="script.js"></script>
+      <h3 style="color: #00ff6a;">Experience</h3>
+      <strong>Cashier</strong><br>
+      <em>2020 - 2022</em>
+      <p>I’ve been working in a Chinese small store for three years, skilled in handling cash, processing payment, and providing excellent customer service.</p>
+
+      <h3 style="color: #00ff6a;">Education</h3>
+      <strong>2021 - 2023</strong><br>
+      <em>Years in Senior High School</em>
+
+      <h3 style="color: #00ff6a;">Language</h3>
+      <ul>
+        <li>Native Filipino</li>
+        <li>Advanced English</li>
+      </ul>
+
+      <h3 style="color: #00ff6a;">Computer Skills</h3>
+      <ul>
+        <li>Programming</li>
+        <li>Spreadsheet</li>
+        <li>Slide Presentation</li>
+        <li>Microsoft</li>
+      </ul>
+
+      <h3 style="color: #00ff6a;">Core Skills</h3>
+      <ul>
+        <li>Highly knowledgeable of products</li>
+        <li>Up to date knowledge of the market</li>
+        <li>Strong communication skills</li>
+        <li>Time Management</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="page-section" id="logos">
+    <h2><span class="highlight">Programming</span> Languages</h2>
+    <div class="logo-container">
+      <img src="images/Css.jpg" alt="CSS Logo">
+      <img src="images/html.jpg" alt="HTML Logo">
+      <img src="images/Java.jpg" alt="Java Logo">
+      <img src="images/Python.jpg" alt="Python Logo">
+      <img src="images/C.jpg" alt="C Logo">
+    </div>
+  </section>
+
+  <section class="page-section" id="pages">
+    <h2>Pages</h2>
+    <p>This portfolio includes: Home, About Me, Resume, Programming Languages, and Contact.</p>
+  </section>
+
+  <section class="page-section" id="contact">
+    <h2>Contact Me</h2>
+    <div class="contact-links">
+      <a href="https://github.com/Kmontajas/Montajas_" target="_blank">GitHub</a>
+      <a href="https://linkedin.com/in/yourlinkedin" target="_blank">LinkedIn</a>
+    </div>
+  </section>
+</main>
+
+<script>
+  // Hide/show sections on nav click
+  const links = document.querySelectorAll('a[data-target]');
+  const sections = document.querySelectorAll('.page-section');
+
+  function showSection(targetId) {
+    sections.forEach(sec => {
+      sec.style.display = (sec.id === targetId) ? 'block' : 'none';
+    });
+  }
+
+  // Initial: show Home only
+  showSection('hero');
+
+  // On nav click
+  links.forEach(link => {
+    link.addEventListener('click', function(e) {
+      e.preventDefault();
+      const target = this.getAttribute('data-target');
+      showSection(target);
+    });
+  });
+</script>
+
 </body>
 </html>
-
-
-
