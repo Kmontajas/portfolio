@@ -3,9 +3,10 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Montajas- kristine Mae</title>
+  <title>Montajas - Kristine Mae</title>
   <link rel="stylesheet" href="style.css">
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
 
@@ -16,9 +17,10 @@
       <ul>
         <li><a href="#hero" data-target="hero">Home</a></li>
         <li><a href="#about" data-target="about">About Me</a></li>
-        <li><a href="#resume" data-target="resume">Resume</a></li>
+        <li><a href="#Experience" data-target="Experience">Experience</a></li>
         <li><a href="#logos" data-target="logos">Programming</a></li>
-        <li><a href="#pages" data-target="pages">Pages</a></li>
+        <li><a href="#Blog" data-target="Blog">Blog</a></li>
+        <li><a href="#certificate" data-target="certificate">Certificate</a></li>
         <li><a href="#contact" data-target="contact" class="contact-btn">Contact Me</a></li>
       </ul>
     </nav>
@@ -28,32 +30,29 @@
 <main>
   <section class="page-section" id="hero">
     <div class="hero-content">
-
-    </div>
-    <div class="hero-image">
-      <img src="images/K.jpg" alt="Profile Image">
-    </div>
-      <h1><span class="highlight">Hi! </span>Welcome to my porfolio,I'm kristine Mae</h1>
+      <div class="hero-image">
+        <img src="images/K.jpg" alt="Profile Image">
+      </div>
+      <h1><span class="highlight">Hi! </span>Welcome to my portfolio, I'm Kristine Mae</h1>
       <p>Together we the people achieve more than any single person could ever do alone.</p>
       <a href="#about" class="btn" data-target="about">GETTING STARTED</a>
     </div>
   </section>
 
   <section class="page-section" id="about">
-    <h2>About Me</h2>
-    <p>Hello! I'm Kristine Mae Montajas, a passionate developer and designer. I love bringing creative ideas to life through clean and responsive code.</p>
+    <h2 class="text-success text-center">About Me</h2>
+    <p>Hello! I'm Kristine Mae Montajas, Hello! I'm Kristine Mae Montajas, I’m a passionate individual who loves to explore new ideas and challenge myself creatively. Ever since I was young, I’ve had a deep curiosity for how things work, especially when it comes to technology. I find joy in solving problems and building things from scratch. My journey has taken me through different paths, but each step helped me grow and learn more about myself. I believe in lifelong learning and constantly strive to improve both professionally and personally.</p>
   </section>
 
-  <section class="page-section" id="resume">
-    <h2 style="text-align:center; color: #00ff6a; font-size: 32px; margin-bottom: 40px;">Resume</h2>
+  <section class="page-section" id="Experience">
+    <h2 class="text-success text-center" style="font-size: 32px; margin-bottom: 40px;">Resume</h2>
     <div style="max-width: 900px; margin: auto; color: #ffffff; line-height: 1.6; font-size: 16px;">
-      <p>I was an IT student before and the reason as to why I decided not to pursue is because of financial reason. I may not be the smartest person in the room, but I can guarantee that I am a very hardworking person. I worked for 3 years in a small store as a cashier.</p>
-
-      
+     <p>Way back from 2023 to 2024, I worked as a sales clerk at Urban and a cashier at a Chinese store. At Urban, I assisted customers with their purchases, organized shelves, and helped maintain a clean, welcoming store environment. I also provided product recommendations and contributed to meeting sales targets. Though my main role wasn’t cashiering, I occasionally helped operate the POS during busy hours. Meanwhile, at the Chinese store, I was fully in charge of the cashier duties handling payments, giving correct change, and balancing the register. I also supported the team by bagging items, stocking products, and keeping the counter area clean. Working in both fast-paced settings helped me become more responsible, detail-oriented, and customer-focused. I learned to communicate clearly, work under pressure, and adapt to different kinds of customers. These experiences greatly improved my confidence and prepared me for future roles in retail or customer service.</p>
+    </div>
   </section>
 
   <section class="page-section" id="logos">
-    <h2><span class="highlight">Programming</span> Languages</h2>
+    <h2 class="text-success text-center"><span class="highlight">Programming</span> Languages</h2>
     <div class="logo-container">
       <img src="images/Css.jpg" alt="CSS Logo">
       <img src="images/html.jpg" alt="HTML Logo">
@@ -63,43 +62,16 @@
     </div>
   </section>
 
-  <section class="page-section" id="pages">
-    <h2>Pages</h2>
-    <p>This portfolio includes: Home, About Me, Resume, Programming Languages, and Contact.</p>
-  </section>
-
   <section class="page-section" id="contact">
-    <h2>Contact Me</h2>
+    <h2 class="text-success text-center">Contact Me</h2>
     <div class="contact-links">
-      <a href="https://github.com/Kmontajas/Montajas_" target="_blank">GitHub</a>
-      <a href="https://linkedin.com/in/yourlinkedin" target="_blank">LinkedIn</a>
+      <a href="https://github.com/Kmontajas_" target="_blank">GitHub</a>
+      <a href="https://www.linkedin.com/in/kristine-mae-montajas-991a532b6/" target="_blank">LinkedIn</a>
     </div>
   </section>
 </main>
 
-<script>
-  // Hide/show sections on nav click
-  const links = document.querySelectorAll('a[data-target]');
-  const sections = document.querySelectorAll('.page-section');
-
-  function showSection(targetId) {
-    sections.forEach(sec => {
-      sec.style.display = (sec.id === targetId) ? 'block' : 'none';
-    });
-  }
-
-  // Initial: show Home only
-  showSection('hero');
-
-  // On nav click
-  links.forEach(link => {
-    link.addEventListener('click', function(e) {
-      e.preventDefault();
-      const target = this.getAttribute('data-target');
-      showSection(target);
-    });
-  });
-</script>
-
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="script.js"></script>
 </body>
 </html>

@@ -1,46 +1,35 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: Arial, sans-serif;
+  font-family: 'Montserrat', Arial, sans-serif;
   color: #ffffff;
   background: linear-gradient(-45deg, #1a0000, #330000, #660000, #990000);
   background-size: 400% 400%;
   animation: moveBG 15s ease infinite;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-    
-
-
+  min-height: 100vh;
+  text-align: center;
 }
 
 @keyframes moveBG {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
 }
 
-* {
-  box-sizing: border-box;
-}
+* { box-sizing: border-box; }
 
-/* Navbar */
 header {
   background-color: rgb(159, 11, 80);
-  padding: 20px 40px;
+  padding: 20px 10px;
 }
 
 .navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .logo {
@@ -52,7 +41,11 @@ header {
 nav ul {
   list-style: none;
   display: flex;
-  gap: 25px;
+  gap: 20px;
+  padding: 0;
+  margin: 0;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 nav ul li a {
@@ -69,35 +62,58 @@ nav ul li a {
   font-weight: bold;
 }
 
-/* Hero Section */
-.hero {
+/* HERO */
+#hero {
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  padding: 80px 40px;
-  gap: 40px;
+  justify-content: center;
+  text-align: center;
+  padding: 80px 20px;
 }
 
 .hero-content {
-  flex: 1 1 350px;
-  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.hero-image {
+  margin-bottom: 20px;
+}
+
+.hero-image img {
+  width: 240px;
+  height: 240px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 4px solid #00ff6a;
+  box-shadow: 0 0 20px rgba(0, 255, 106, 0.5);
+}
+
+.hero-content {
+  max-width: 800px;
 }
 
 .hero-content h1 {
-  font-size: 42px;
-  line-height: 1.4;
+  font-size: 36px;
   font-weight: 900;
-}
-
-.highlight {
-  color: #00ff6a;
+  color: #ffffff;
 }
 
 .hero-content p {
   margin: 20px 0;
   font-size: 16px;
   color: #ccc;
+}
+
+.highlight {
+  color: #00ff6a;
 }
 
 .btn {
@@ -109,148 +125,133 @@ nav ul li a {
   border-radius: 5px;
 }
 
-/* Hero Image */
-.hero-image {
-  flex: 1 1 300px;
-  display: flex;
-  justify-content: center;
+/* ABOUT */
+#about {
+  padding: 50px 20px;
 }
 
-.hero-image img {
-  width: 300px;
-  height: 350px;
-  object-fit: cover;
-  border-radius: 50%;
-  border: 4px solid #00ff6a;
-  box-shadow: 0 0 20px rgba(0, 255, 106, 0.5);
+#about p {
+  color: #ccc;
+  max-width: 800px;
+  margin: 0 auto;
+  font-size: 16px;
+  line-height: 1.6;
 }
 
-/* Programming Logos Section */
-.logos {
-  padding: 100px 80px;
-  text-align: center;
+/* EXPERIENCE */
+#Experience {
+  padding: 50px 20px;
 }
 
-.logos h2 {
-  font-size: 50px;
-  margin-bottom: 30px;
-  color: #f9eff7;
+/* PROGRAMMING LOGOS */
+#logos {
+  padding: 50px 20px;
 }
 
 .logo-container {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 30px;
   flex-wrap: wrap;
+  justify-content: center;
+  gap: 25px;
 }
 
 .logo-container img {
-  width: 100x;
-  height: 100px;
+  width: 90px;
+  height: 90px;
   object-fit: contain;
   border-radius: 8px;
   transition: transform 0.3s ease;
-  transform: rotate(-5deg);
   box-shadow: 0 4px 10px rgba(0, 255, 106, 0.2);
 }
 
 .logo-container img:hover {
-  transform: rotate(0deg) scale(1.1);
+  transform: scale(1.1);
 }
 
-/* Contact Section */
+/* CONTACT */
 #contact {
-  padding: 60px 40px;
+  padding: 60px 20px;
   background-color: rgba(0, 0, 0, 0.5);
-  text-align: center;
-}
-
-#contact h2 {
-  font-size: 28px;
-  margin-bottom: 20px;
 }
 
 .contact-links a {
-  margin: 0 15px;
+  display: inline-block;
+  margin: 10px 15px;
   text-decoration: none;
-  color: #00ff6a;
+  color: hsl(146, 21%, 94%);
   font-weight: bold;
   font-size: 18px;
   transition: color 0.3s ease;
+  
 }
 
 .contact-links a:hover {
   color: #ffffff;
 }
 
-/* Page Section Styles */
-.page-section {
-  display: none;
-  padding: 50px 20px;
-  text-align: center;
-}
-
-.page-section h2 {
-  color: #00ff6a;
-  font-size: 32px;
-  margin-bottom: 40px;
-}
-
-.page-section p {
-  color: #ccc;
-  font-size: 16px;
-  line-height: 1.6;
-}
-
-/* Show Home Section by default */
-#hero {
-  display: block;
-}
-
-/* Resume Section */
-#resume h3 {
-  color: #00ff6a;
-}
-
-#resume ul {
-  list-style: none;
-  padding-left: 0;
-}
-
-#resume ul li {
-  margin-bottom: 10px;
-}
-
-
-/* Responsive Design */
-@media (max-width: 768px) {
-  .hero {
+/* RESPONSIVE */
+@media screen and (max-width: 768px) {
+  .navbar {
     flex-direction: column;
     align-items: center;
-    text-align: center;
-  }
-
-  .hero-content {
-    max-width: 100%;
-  }
-
-  .hero-image {
-    margin-top: 20px;
   }
 
   nav ul {
     flex-direction: column;
-    align-items: flex-start;
-    gap: 10px;
+    align-items: center;
   }
 
-  .contact-links {
-    display: flex;
-    flex-direction: column;
+  .hero-content h1 {
+    font-size: 28px;
+  }
+
+  .hero-image img {
+    width: 200px;
+    height: 240px;
+  }
+
+  .contact-btn {
+    display: block;
+    margin: 10px auto;
+    text-align: center;
   }
 }
 
+@media screen and (max-width: 480px) {
+  .hero-content h1 {
+    font-size: 24px;
+  }
+
+  .btn {
+    font-size: 14px;
+    padding: 10px 14px;
+  }
+
+  .logo-container img {
+    width: 60px;
+    height: 60px;
+  }
+}
+
+.page-section {
+  display: none;
+  padding: 60px 40px;
+}
+
+.page-section#hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 80px 20px;
+}
+
+@media (max-width: 768px) {
+  #certificate img {
+    width: 100%;
+  }
+}
 
   
   .page-section {
@@ -260,9 +261,11 @@ nav ul li a {
   
   .page-section#hero {
     display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    padding: 80px 40px;
+    justify-content: center;
+    text-align: center;
+    padding: 80px 20px;
   }
+  
   
