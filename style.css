@@ -1,13 +1,18 @@
+/* GENERAL */
 body {
   margin: 0;
   padding: 0;
   font-family: 'Montserrat', Arial, sans-serif;
   color: #ffffff;
-  background: linear-gradient(-45deg, #1a0000, #330000, #660000, #990000);
+  background: linear-gradient(-45deg, #060970, #06a175, #2f049c, #036741);
   background-size: 400% 400%;
   animation: moveBG 15s ease infinite;
   min-height: 100vh;
   text-align: center;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: #ffffff;
 }
 
 @keyframes moveBG {
@@ -18,12 +23,18 @@ body {
 
 * { box-sizing: border-box; }
 
+html {
+  scroll-behavior: smooth;
+}
+
+/* HEADER + NAVBAR */
 header {
-  background-color: rgb(159, 11, 80);
+  background-color: rgb(10, 1, 6);
   padding: 20px 10px;
 }
 
 .navbar {
+  background-color: rgb(22, 2, 12);
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -32,10 +43,11 @@ header {
   margin: 0 auto;
 }
 
-.logo {
-  color: #00ff6a;
+.navbar-brand {
   font-weight: 900;
   font-size: 24px;
+  color: hsl(140, 23%, 95%);
+  margin-bottom: 10px;
 }
 
 nav ul {
@@ -48,21 +60,25 @@ nav ul {
   justify-content: center;
 }
 
-nav ul li a {
+.nav-link {
   color: white;
-  text-decoration: none;
   font-weight: 500;
+  font-size: 18px;
+}
+
+.nav-link:hover {
+  color: hsl(0, 0%, 100%);
 }
 
 .contact-btn {
-  background-color: #00ff6a;
-  padding: 10px 16px;
-  color: #0fab2e;
+  padding: 8px 16px;
   border-radius: 5px;
   font-weight: bold;
+  background-color: hwb(0 97% 3%);
+  color: rgb(244, 241, 241) !important;
 }
 
-/* HERO */
+/* HERO SECTION */
 #hero {
   display: flex;
   flex-direction: column;
@@ -73,18 +89,8 @@ nav ul li a {
 }
 
 .hero-content {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 20px;
   max-width: 800px;
   margin: 0 auto;
-  text-align: center;
-}
-
-.hero-image {
-  margin-bottom: 20px;
 }
 
 .hero-image img {
@@ -94,16 +100,12 @@ nav ul li a {
   border-radius: 50%;
   border: 4px solid #00ff6a;
   box-shadow: 0 0 20px rgba(0, 255, 106, 0.5);
-}
-
-.hero-content {
-  max-width: 800px;
+  margin-bottom: 20px;
 }
 
 .hero-content h1 {
   font-size: 36px;
   font-weight: 900;
-  color: #ffffff;
 }
 
 .hero-content p {
@@ -113,11 +115,11 @@ nav ul li a {
 }
 
 .highlight {
-  color: #00ff6a;
+  color: lab(9.33% 2.47 0.91);
 }
 
 .btn {
-  background-color: #00ff6a;
+  background-color: hsl(146, 14%, 90%);
   padding: 12px 20px;
   color: #000;
   text-decoration: none;
@@ -125,29 +127,67 @@ nav ul li a {
   border-radius: 5px;
 }
 
-/* ABOUT */
+/* SECTIONS - COMMON STYLING */
+.page-section {
+  display: none;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+  padding: 60px 40px;
+}
+
+.page-section#hero {
+  display: flex;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.page-section.show {
+  display: block;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ABOUT SECTION */
 #about {
-  padding: 50px 20px;
+  padding: 60px 40px;
+}
+
+#about h2 {
+  color: hsla(0, 0%, 5%, 0.685);
 }
 
 #about p {
-  color: #ccc;
-  max-width: 800px;
-  margin: 0 auto;
-  font-size: 16px;
-  line-height: 1.6;
+  color: #ffffff;
 }
 
-/* EXPERIENCE */
-#Experience {
-  padding: 50px 20px;
+/* EXPERIENCE SECTION */
+#experience {
+  padding: 60px 40px;
 }
 
-/* PROGRAMMING LOGOS */
-#logos {
-  padding: 50px 20px;
+#experience h2 {
+  color: hsl(143, 12%, 87%);
 }
 
+#experience p {
+  color: #ffffff;
+}
+
+/* PROGRAMMING SECTION */
+#programming {
+  padding: 60px 40px;
+}
+
+#programming h2 {
+  color: #ffffff(144, 33%, 94%);
+}
+
+#programming p {
+  color: #ffffff;
+}
+
+/* LOGOS SECTION (Programming Logos Example) */
 .logo-container {
   display: flex;
   flex-wrap: wrap;
@@ -161,36 +201,39 @@ nav ul li a {
   object-fit: contain;
   border-radius: 8px;
   transition: transform 0.3s ease;
-  box-shadow: 0 4px 10px rgba(0, 255, 106, 0.2);
+  box-shadow: 0 4px 10px #43b079f5;
 }
 
 .logo-container img:hover {
   transform: scale(1.1);
 }
 
-/* CONTACT */
+/* CONTACT SECTION */
 #contact {
   padding: 60px 20px;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: #17887dd1;
+}
+
+#contact h2 {
+  color: #0e1210e1;
 }
 
 .contact-links a {
   display: inline-block;
   margin: 10px 15px;
   text-decoration: none;
-  color: hsl(146, 21%, 94%);
+  color: #ffffff(146, 21%, 94%);
   font-weight: bold;
   font-size: 18px;
   transition: color 0.3s ease;
-  
 }
 
 .contact-links a:hover {
-  color: #ffffff;
+  color: #ffffff(0, 38%, 94%);
 }
 
-/* RESPONSIVE */
-@media screen and (max-width: 768px) {
+/* RESPONSIVE DESIGN */
+@media (max-width: 768px) {
   .navbar {
     flex-direction: column;
     align-items: center;
@@ -209,63 +252,28 @@ nav ul li a {
     width: 200px;
     height: 240px;
   }
-
-  .contact-btn {
-    display: block;
-    margin: 10px auto;
-    text-align: center;
-  }
 }
 
-@media screen and (max-width: 480px) {
-  .hero-content h1 {
-    font-size: 24px;
-  }
-
-  .btn {
-    font-size: 14px;
-    padding: 10px 14px;
-  }
-
-  .logo-container img {
-    width: 60px;
-    height: 60px;
-  }
-}
-
-.page-section {
-  display: none;
-  padding: 60px 40px;
-}
-
-.page-section#hero {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+#about, #experience, #programming, #contact {
   text-align: center;
-  padding: 80px 20px;
 }
 
-@media (max-width: 768px) {
-  #certificate img {
-    width: 100%;
-  }
+#contact .contact-links {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
-  
-  .page-section {
-    display: none; /* hide all by default */
-    padding: 60px 40px;
+@media (min-width: 992px) {
+  .navbar-expand-lg .navbar-collapse {
+    display: none !important;
   }
-  
-  .page-section#hero {
-    display: flex;
+
+  .navbar-expand-lg .navbar-collapse.show {
+    display: flex !important;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    text-align: center;
-    padding: 80px 20px;
   }
-  
-  
+}
+
+

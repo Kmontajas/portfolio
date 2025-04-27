@@ -8,7 +8,7 @@ function showSection(targetId) {
   });
 }
 
-// Initial: show Home only
+// Initial show Home
 showSection('hero');
 
 // On nav click
@@ -18,6 +18,30 @@ links.forEach(link => {
     const target = this.getAttribute('data-target');
     showSection(target);
   });
+});
+
+// Toggle hamburger menu
+const toggler = document.querySelector('.navbar-toggler');
+const navMenu = document.querySelector('#navbarNav');
+
+toggler.addEventListener('click', function() {
+  navMenu.classList.toggle('show');
+});
+
+// Fade-in animation when sections enter viewport
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('show');
+    }
+  });
+}, {
+  threshold: 0.2
+});
+
+// Observe sections
+sections.forEach(section => {
+  observer.observe(section);
 });
 
 
