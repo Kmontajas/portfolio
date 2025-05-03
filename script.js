@@ -2,14 +2,17 @@
 const links = document.querySelectorAll('a[data-target]');
 const sections = document.querySelectorAll('.page-section');
 
+
 function showSection(targetId) {
   sections.forEach(sec => {
     sec.style.display = (sec.id === targetId) ? 'block' : 'none';
   });
 }
 
+
 // Initial show Home
 showSection('hero');
+
 
 // On nav click
 links.forEach(link => {
@@ -20,13 +23,16 @@ links.forEach(link => {
   });
 });
 
+
 // Toggle hamburger menu
 const toggler = document.querySelector('.navbar-toggler');
 const navMenu = document.querySelector('#navbarNav');
 
+
 toggler.addEventListener('click', function() {
   navMenu.classList.toggle('show');
 });
+
 
 // Fade-in animation when sections enter viewport
 const observer = new IntersectionObserver((entries) => {
@@ -39,9 +45,16 @@ const observer = new IntersectionObserver((entries) => {
   threshold: 0.2
 });
 
+
 // Observe sections
 sections.forEach(section => {
   observer.observe(section);
 });
+
+
+
+
+
+
 
 
