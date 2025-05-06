@@ -1,4 +1,7 @@
-{ box-sizing: border-box; }
+* {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -148,18 +151,32 @@ nav ul {
   font-weight: 700;
 }
 
+.section-title {
+  font-size: 28px;
+  font-weight: bold;
+  color: #fff;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
 .logo-container {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 25px;
-  margin-top: 20px;
+  gap: 40px;
   background-color: white;
   padding: 40px;
   border-radius: 10px;
 }
 
-.logo-container img {
+.logo-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100px;
+}
+
+.logo-item img {
   width: 90px;
   height: 90px;
   object-fit: contain;
@@ -168,9 +185,17 @@ nav ul {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
 }
 
-.logo-container img:hover {
+.logo-item img:hover {
   transform: scale(1.1);
 }
+
+.logo-item p {
+  margin-top: 10px;
+  font-weight: bold;
+  color: #000;
+  text-align: center;
+}
+
 
 .certificate-container {
   display: flex;
@@ -178,6 +203,17 @@ nav ul {
   justify-content: center;
   gap: 20px;
   padding: 20px;
+}
+
+@media (max-width: 768px) {
+  .certificate-container {
+    justify-content: center;
+  }
+
+  .certificate-container img {
+    width: 45%;
+    height: auto;
+  }
 }
 
 .certificate-container img {
@@ -237,4 +273,68 @@ nav ul {
     width: 200px;
     height: 200px;
   }
+}
+
+.about-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.about-image img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 4px solid #00ff6a;
+  box-shadow: 0 0 20px rgba(0, 255, 106, 0.5);
+}
+
+.about-text {
+  max-width: 500px;
+  text-align: justify;
+}
+
+@media (max-width: 768px) {
+  .about-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .about-text {
+    text-align: justify;
+  }
+}
+
+/* Animation Keyframes */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Reusable fade-in class */
+.fade-in {
+  animation: fadeInUp 1s ease-out forwards;
+  opacity: 0;
+}
+
+/* Optional delay variants */
+.fade-delay-1 {
+  animation-delay: 0.3s;
+}
+
+.fade-delay-2 {
+  animation-delay: 0.6s;
+}
+
+.fade-delay-3 {
+  animation-delay: 0.9s;
 }
