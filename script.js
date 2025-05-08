@@ -51,6 +51,18 @@ sections.forEach(section => {
   observer.observe(section);
 });
 
+document.addEventListener('DOMContentLoaded', () => {
+  // Select all page sections
+  const sections = document.querySelectorAll('.page-section');
+  
+  // Add the 'show' class to each section for a fade-in effect
+  sections.forEach((section, index) => {
+    setTimeout(() => {
+      section.classList.add('show');
+    }, index * 300); // Delay each section for a nice staggered effect
+  });
+});
+
 
 
 

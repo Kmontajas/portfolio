@@ -66,8 +66,8 @@ nav ul {
   padding: 8px 16px;
   border-radius: 5px;
   font-weight: bold;
-  background-color: hwb(0 97% 3%);
-  color: rgb(244, 241, 241) !important;
+  background-color: #f7f7f7;
+  color: lab(95.48% 3.02 1.06) !important;
 }
 
 #hero {
@@ -122,18 +122,18 @@ nav ul {
   text-align: center;
 }
 
+
 .page-section {
-  display: none;
-  opacity: 0;
-  transform: translateY(30px);
+  display: block; 
+  opacity: 0; 
+  transform: translateY(30px); 
   transition: opacity 0.8s ease-out, transform 0.8s ease-out;
   padding: 60px 40px;
 }
 
 .page-section.show {
-  display: block;
-  opacity: 1;
-  transform: translateY(0);
+  opacity: 1; 
+  transform: translateY(0); /
 }
 
 .page-section p {
@@ -195,7 +195,6 @@ nav ul {
   color: #000;
   text-align: center;
 }
-
 
 .certificate-container {
   display: flex;
@@ -308,7 +307,7 @@ nav ul {
   }
 }
 
-/* Animation Keyframes */
+
 @keyframes fadeInUp {
   from {
     opacity: 0;
@@ -320,13 +319,11 @@ nav ul {
   }
 }
 
-/* Reusable fade-in class */
 .fade-in {
   animation: fadeInUp 1s ease-out forwards;
   opacity: 0;
 }
 
-/* Optional delay variants */
 .fade-delay-1 {
   animation-delay: 0.3s;
 }
