@@ -5,7 +5,7 @@ const sections = document.querySelectorAll('.page-section');
 
 function showSection(targetId) {
   sections.forEach(sec => {
-    sec.style.display = (sec.id === targetId) ? 'block' : 'none';
+    sec.style.display = (sec.id === targetId) ? 'block' : 'flex';
   });
 }
 
