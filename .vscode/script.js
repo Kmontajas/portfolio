@@ -1,6 +1,7 @@
-// Show/Hide Sections on nav click
+// Hide/show sections on nav click
 const links = document.querySelectorAll('a[data-target]');
 const sections = document.querySelectorAll('.page-section');
+
 
 function showSection(targetId) {
   sections.forEach(sec => {
@@ -8,8 +9,12 @@ function showSection(targetId) {
   });
 }
 
-showSection('home'); // Default to show home section initially
 
+// Initial show Home
+showSection('hero');
+
+
+// On nav click
 links.forEach(link => {
   link.addEventListener('click', function(e) {
     e.preventDefault();
@@ -18,15 +23,18 @@ links.forEach(link => {
   });
 });
 
-// Toggle navbar menu
+
+// Toggle hamburger menu
 const toggler = document.querySelector('.navbar-toggler');
 const navMenu = document.querySelector('#navbarNav');
+
 
 toggler.addEventListener('click', function() {
   navMenu.classList.toggle('show');
 });
 
-// IntersectionObserver for section visibility
+
+// Fade-in animation when sections enter viewport
 const observer = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
@@ -37,30 +45,28 @@ const observer = new IntersectionObserver((entries) => {
   threshold: 0.2
 });
 
-// Observe each page section for visibility
-sections.forEach(sec => {
-  observer.observe(sec);
+
+// Observe sections
+sections.forEach(section => {
+  observer.observe(section);
 });
 
-// Modal functionality for certificates
-const modal = document.getElementById("modal");
-const modalImg = document.getElementById("modal-img");
-const images = document.querySelectorAll(".certificate-img");
-const closeBtn = document.querySelector(".close");
-
-images.forEach(img => {
-  img.addEventListener("click", () => {
-    modal.style.display = "block";
-    modalImg.src = img.src;
+document.addEventListener('DOMContentLoaded', () => {
+  // Select all page sections
+  const sections = document.querySelectorAll('.page-section');
+  
+  // Add the 'show' class to each section for a fade-in effect
+  sections.forEach((section, index) => {
+    setTimeout(() => {
+      section.classList.add('show');
+    }, index * 300); // Delay each section for a nice staggered effect
   });
 });
 
-closeBtn.onclick = () => modal.style.display = "none";
-window.onclick = e => {
-  if (e.target === modal) modal.style.display = "none";
-};
 
 
-    
+
+
+
 
 

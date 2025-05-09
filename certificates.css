@@ -1,0 +1,23 @@
+/* certificates.css */
+
+.certificate-img {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 0 8px rgba(255, 255, 255, 0.2);
+    transition: transform 0.2s;
+    cursor: pointer;
+  }
+  
+  .certificate-img:hover {
+    transform: scale(1.03);
+  }
+  
+  .modal-img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+  }
+  
+  
