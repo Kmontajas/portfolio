@@ -394,14 +394,14 @@ section, header, footer {
 
 .tech-stack-section {
   padding: 3rem 0;
-  background-color: white;
+  background-color: transparent;
 }
 
 .tech-stack-section h2 {
   text-align: center;
   margin-bottom: 2rem;
   font-weight: 700;
-  color: #333;
+  color: hsl(0, 0%, 100%);
 }
 
 .tech-stack-section .row .col-2 {
@@ -419,7 +419,7 @@ section, header, footer {
   margin: 0;
   font-size: 0.95rem;
   font-weight: 500;
-  color: #444;
+  color: lab(98.1% 2.33 0.82)7% 0%;
 }
 
 
