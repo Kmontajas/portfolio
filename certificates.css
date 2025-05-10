@@ -1,23 +1,69 @@
-/* certificates.css */
 
+body {
+  font-family: 'Montserrat', sans-serif;
+  background-color: #111;
+  color: #fff;
+  margin: 0;
+  padding: 0;
+}
+
+.certificate-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  justify-items: center;
+}
+
+.certificate-item {
+  text-align: center;
+}
 .certificate-img {
-    width: 100%;
-    aspect-ratio: 4 / 3;
-    object-fit: cover;
-    border-radius: 10px;
-    box-shadow: 0 0 8px rgba(255, 255, 255, 0.2);
-    transition: transform 0.2s;
-    cursor: pointer;
+  width: 100%;
+  aspect-ratio: 4 / 3; /* forces consistent size */
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.certificate-img:hover {
+  transform: scale(1.05);
+}
+
+
+
+.certificate-label {
+  margin-top: 10px;
+  font-weight: 600;
+  color: #fff;
+}
+
+/* Modal image */
+.modal-img {
+  width: 100%;
+  height: auto;
+  max-height: 80vh;
+  border-radius: 10px;
+}
+
+/* Responsive layout */
+@media (max-width: 992px) {
+  .certificate-grid {
+    grid-template-columns: repeat(2, 1fr);
   }
+}
+
+@media (max-width: 576px) {
+  .certificate-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+
+
+
   
-  .certificate-img:hover {
-    transform: scale(1.03);
-  }
-  
-  .modal-img {
-    width: 100%;
-    height: auto;
-    border-radius: 10px;
-  }
   
   

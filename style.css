@@ -23,7 +23,7 @@ body {
 
 header {
   background-color: rgb(10, 1, 6);
-  padding: 20px 10px;
+  
 }
 
 .navbar {
@@ -392,10 +392,9 @@ section, header, footer {
   color: white;
 }
 
-/* ====== TECH STACK SECTION ====== */
 .tech-stack-section {
   padding: 3rem 0;
-  background-color: #ffffff;
+  background-color: white;
 }
 
 .tech-stack-section h2 {
@@ -423,7 +422,7 @@ section, header, footer {
   color: #444;
 }
 
-/* ====== CERTIFICATE SECTION ====== */
+
 .certificate-section {
   padding: 3rem 2rem;
   background-color: #ffffff;
@@ -449,7 +448,6 @@ section, header, footer {
   transform: scale(1.03);
 }
 
-/* ====== RESPONSIVE (MOBILE) ====== */
 @media (max-width: 576px) {
   .tech-stack-section img {
     width: 60px;
@@ -461,7 +459,7 @@ section, header, footer {
   }
 }
 
-/* ====== CONTACT SECTION ====== */
+
 .contact-section {
   background-color: #f8f9fa;
   padding: 4rem 2rem;
