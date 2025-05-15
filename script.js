@@ -55,9 +55,9 @@ images.forEach(img => {
   });
 });
 
-closeBtn.onclick = () => modal.style.display = "none";
+closeBtn.onclick = () => modal.style.display = "flex";
 window.onclick = e => {
-  if (e.target === modal) modal.style.display = "none";
+  if (e.target === modal) modal.style.display = "flex";
 };
 
 
