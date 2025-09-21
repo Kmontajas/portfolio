@@ -189,53 +189,54 @@ header {
 
 .tech-stack-section h2 {
   text-align: center;
-  margin-bottom: 2rem;
+  margin: 2.5rem 0 1.5rem; /* spacing per section */
   font-weight: 700;
   color: white;
 }
 
-.tech-stack-section .row {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  gap: 15px;
-  margin-top: 20px;
-}
-
-.tech-stack-section .col {
-  width: 18%;
+.tech-stack {
   text-align: center;
+  padding: 40px 20px;
 }
 
-.tech-stack-section img {
-  width: 80px;
-  height: 80px;
+.tools-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 30px;
+  justify-items: center;
+  margin: 20px auto 60px;
+  max-width: 1000px;
+}
+
+.tool img {
+  width: 70px;
+  height: 70px;
   object-fit: contain;
-  margin-bottom: 10px;
 }
 
-.tech-stack-section p {
-  margin-top: 0.5rem;
-  font-weight: 500;
+.tool p {
+  margin-top: 8px;
+  font-size: 14px;
   color: white;
 }
 
+/* Mobile responsive */
 @media (max-width: 600px) {
-  .tech-stack-section .row {
-    justify-content: center !important;
-    gap: 10px !important;
+  .tools-grid {
+    gap: 20px !important;
+    margin-bottom: 40px !important;
   }
 
-  .tech-stack-section .col {
-    width: 50% !important;
-    margin-bottom: 15px !important;
+  .tool img {
+    width: 60px !important;
+    height: 60px !important;
   }
 
-  .tech-stack-section img {
-    width: 70px !important;
-    height: 70px !important;
+  .tool p {
+    font-size: 13px !important;
   }
 }
+
 
 /* CERTIFICATES */
 .certificate-section {
