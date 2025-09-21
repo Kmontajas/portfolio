@@ -337,6 +337,55 @@ header {
   cursor: pointer;
 }
 
+/* Section styling */
+#mobile-app {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  min-height: 100vh; /* full screen height */
+  background: linear-gradient(to right, #0000A0, #4B0082); /* same style as yours */
+  color: white;
+}
+
+/* Title */
+#mobile-app h1 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+/* Image */
+#mobile-app img {
+  width: 250px;   /* adjust size */
+  height: auto;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+}
+
+/* Paragraph */
+#mobile-app p {
+  font-size: 1rem;
+  margin-bottom: 15px;
+}
+
+/* Link button */
+#mobile-app .app-link {
+  display: inline-block;
+  padding: 10px 20px;
+  background: #311503;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: 0.3s;
+}
+
+#mobile-app .app-link:hover {
+  background: #1f0e03;
+}
+
+
 /* CONTACT */
 .contact-section {
   background-color: transparent;
