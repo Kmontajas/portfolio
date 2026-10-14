@@ -17,6 +17,20 @@ body {
 .certificate-item {
   text-align: center;
 }
+
+.extracurricular-gallery {
+  justify-content: center;
+}
+
+.extracurricular-gallery > [class*="col-"] {
+  display: flex;
+  flex-direction: column;
+}
+
+.extracurricular-gallery .certificate-label {
+  flex: 1;
+}
+
 .certificate-img {
   width: 100%;
   aspect-ratio: 4 / 3; /* forces consistent size */
