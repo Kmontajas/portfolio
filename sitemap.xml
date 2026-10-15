@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  <url>
+    <loc>https://kmontajas.github.io/portfolio/</loc>
+    <lastmod>2026-10-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://kmontajas.github.io/portfolio/images/k%20pic.jpg</image:loc>
+      <image:title>Kristine Mae Montajas - Cybersecurity &amp; Cloud Specialist</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://kmontajas.github.io/portfolio/about-me.html</loc>
+    <lastmod>2026-10-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://kmontajas.github.io/portfolio/images/Tine.jpg</image:loc>
+      <image:title>About Kristine Mae Montajas</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://kmontajas.github.io/portfolio/experience.html</loc>
+    <lastmod>2026-10-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://kmontajas.github.io/portfolio/tech-stack.html</loc>
+    <lastmod>2026-10-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://kmontajas.github.io/portfolio/projects.html</loc>
+    <lastmod>2026-10-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://kmontajas.github.io/portfolio/images/Images%202.png</image:loc>
+      <image:title>Rx Box Smart Medication Reminder Hardware</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://kmontajas.github.io/portfolio/images/Images%208.png</image:loc>
+      <image:title>Smart Waste Sorting &amp; Multi-Bin Monitoring System</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://kmontajas.github.io/portfolio/certificates.html</loc>
+    <lastmod>2026-10-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://kmontajas.github.io/portfolio/images/IT%20Specialist%20Cybersecurity.png</image:loc>
+      <image:title>Certiport IT Specialist: Cybersecurity Industry Certificate</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://kmontajas.github.io/portfolio/contact.html</loc>
+    <lastmod>2026-10-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+</urlset>

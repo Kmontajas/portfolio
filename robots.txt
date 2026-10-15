@@ -1,0 +1,25 @@
+# robots.txt for Kristine Mae Montajas Portfolio
+User-agent: *
+Allow: /
+
+# AI & Search Engine Crawlers
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Applebot
+Allow: /
+
+User-agent: GPTBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+# Sitemap Location
+Sitemap: https://kmontajas.github.io/portfolio/sitemap.xml
