@@ -1,0 +1,16 @@
+{
+  "name": "Kristine Mae Montajas Portfolio",
+  "short_name": "Kristine Mae",
+  "description": "Portfolio of Kristine Mae Montajas — Certified IT Specialist in Cybersecurity, Cloud Solutions, and IoT Systems Developer.",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#090c10",
+  "theme_color": "#d13fff",
+  "icons": [
+    {
+      "src": "images/k pic.jpg",
+      "sizes": "192x192 512x512",
+      "type": "image/jpeg"
+    }
+  ]
+}
