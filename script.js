@@ -59,8 +59,8 @@
       }
     });
 
-    // Close menu when clicking any nav link
-    navItems.forEach(link => {
+    // Close menu when clicking any nav link or CTA button inside drawer
+    hudLinks.querySelectorAll('a').forEach(link => {
       link.addEventListener('click', () => {
         closeMobileNav();
       });
@@ -92,28 +92,6 @@
   // --------------------------------------------------------------------------
   // 3. MULTI-PAGE ACTIVE NAV & IN-PAGE SCROLL-SPY (WHEN HASH NAV PRESENT)
   // --------------------------------------------------------------------------
-  // Automatically identify and verify the current page link (handles clean URLs & .html)
-  const rawPath = window.location.pathname.split('/').filter(Boolean).pop() || 'index.html';
-  const currentBase = rawPath.toLowerCase().replace(/\.html$/, '');
-
-  navItems.forEach(link => {
-    const href = (link.getAttribute('href') || '').toLowerCase();
-    const cleanHref = href.split('#')[0].split('?')[0];
-    const targetBase = cleanHref.split('/').filter(Boolean).pop().replace(/\.html$/, '');
-
-    if (targetBase === currentBase || (currentBase === 'index' && targetBase === 'index')) {
-      link.classList.add('active');
-      link.setAttribute('aria-current', 'page');
-    } else if (cleanHref.endsWith('.html') || targetBase) {
-      // Don't wipe active if already correctly set or on a section
-      if (targetBase !== currentBase) {
-        link.classList.remove('active');
-        link.removeAttribute('aria-current');
-      }
-    }
-  });
-
-  // Only run in-page scroll-spy if navigation is using in-page hash anchors
   const hasInPageHashNav = Array.from(navItems).some(link => {
     const href = link.getAttribute('href') || '';
     return href.startsWith('#') && href.length > 1;
@@ -121,12 +99,40 @@
 
   function setActiveNav(targetId) {
     navItems.forEach(link => {
-      if (link.getAttribute('href') === `#${targetId}`) {
+      const href = link.getAttribute('href') || '';
+      if (href === `#${targetId}`) {
         link.classList.add('active');
+        link.setAttribute('aria-current', 'true');
       } else {
         link.classList.remove('active');
+        link.removeAttribute('aria-current');
       }
     });
+  }
+
+  if (!hasInPageHashNav) {
+    // Multi-page navigation matching (handles clean URLs & .html)
+    const rawPath = window.location.pathname.split('/').filter(Boolean).pop() || 'index.html';
+    const currentBase = rawPath.toLowerCase().replace(/\.html$/, '');
+
+    navItems.forEach(link => {
+      const href = (link.getAttribute('href') || '').toLowerCase();
+      const cleanHref = href.split('#')[0].split('?')[0];
+      const targetBase = cleanHref.split('/').filter(Boolean).pop().replace(/\.html$/, '');
+
+      if (targetBase === currentBase || (currentBase === 'index' && targetBase === 'index')) {
+        link.classList.add('active');
+        link.setAttribute('aria-current', 'page');
+      } else if (cleanHref.endsWith('.html') || targetBase) {
+        if (targetBase !== currentBase) {
+          link.classList.remove('active');
+          link.removeAttribute('aria-current');
+        }
+      }
+    });
+  } else if (window.location.hash) {
+    const initId = window.location.hash.replace('#', '');
+    setActiveNav(initId);
   }
 
   if (hasInPageHashNav && 'IntersectionObserver' in window && sections.length > 0) {
