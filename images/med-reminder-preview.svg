@@ -1,0 +1,191 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" width="1200" height="800" fill="none">
+  <defs>
+    <linearGradient id="bgGrad" x1="0" y1="0" x2="1200" y2="800" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#0d1117" />
+      <stop offset="50%" stop-color="#161b22" />
+      <stop offset="100%" stop-color="#0a0d12" />
+    </linearGradient>
+    <linearGradient id="purpleAccent" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#d13fff" />
+      <stop offset="100%" stop-color="#00f2fe" />
+    </linearGradient>
+    <linearGradient id="cardGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#21262d" />
+      <stop offset="100%" stop-color="#161b22" />
+    </linearGradient>
+    <filter id="cardShadow" x="-10" y="-10" width="1220" height="820" filterUnits="userSpaceOnUse">
+      <feDropShadow dx="0" dy="8" stdDeviation="16" flood-color="#000000" flood-opacity="0.6"/>
+    </filter>
+  </defs>
+
+  <!-- Background Canvas -->
+  <rect width="1200" height="800" fill="url(#bgGrad)" />
+
+  <!-- Grid overlay -->
+  <g opacity="0.08" stroke="#ffffff" stroke-width="1">
+    <line x1="0" y1="100" x2="1200" y2="100" />
+    <line x1="0" y1="200" x2="1200" y2="200" />
+    <line x1="0" y1="300" x2="1200" y2="300" />
+    <line x1="0" y1="400" x2="1200" y2="400" />
+    <line x1="0" y1="500" x2="1200" y2="500" />
+    <line x1="0" y1="600" x2="1200" y2="600" />
+    <line x1="0" y1="700" x2="1200" y2="700" />
+    <line x1="200" y1="0" x2="200" y2="800" />
+    <line x1="400" y1="0" x2="400" y2="800" />
+    <line x1="600" y1="0" x2="600" y2="800" />
+    <line x1="800" y1="0" x2="800" y2="800" />
+    <line x1="1000" y1="0" x2="1000" y2="800" />
+  </g>
+
+  <!-- Browser Frame Window -->
+  <g filter="url(#cardShadow)">
+    <rect x="80" y="60" width="1040" height="680" rx="14" fill="#0d1117" stroke="#30363d" stroke-width="1.5" />
+    
+    <!-- Browser Top Bar -->
+    <path d="M80 74a14 14 0 0 1 14-14h1012a14 14 0 0 1 14 14v44H80V74z" fill="#161b22" />
+    <line x1="80" y1="118" x2="1120" y2="118" stroke="#30363d" stroke-width="1" />
+
+    <!-- Window Control Buttons -->
+    <circle cx="110" cy="89" r="6" fill="#ff5f56" />
+    <circle cx="130" cy="89" r="6" fill="#ffbd2e" />
+    <circle cx="150" cy="89" r="6" fill="#27c93f" />
+
+    <!-- Browser Address Bar -->
+    <rect x="240" y="74" width="600" height="30" rx="6" fill="#0d1117" stroke="#30363d" stroke-width="1" />
+    <g transform="translate(252, 81)" stroke="#8b949e" stroke-width="1.5" fill="none">
+      <rect x="1" y="4" width="12" height="8" rx="2" />
+      <path d="M4 4V2.5a2.5 2.5 0 0 1 5 0V4" />
+    </g>
+    <text x="276" y="94" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" fill="#8b949e">https://brook-sheet.github.io/med-reminder-web-app/</text>
+
+    <!-- Web App Navbar Inside Frame -->
+    <rect x="80" y="118" width="1040" height="64" fill="#090c10" stroke="#21262d" stroke-width="1" />
+    <g transform="translate(112, 134)">
+      <!-- App Logo / Pill Icon -->
+      <rect x="0" y="2" width="28" height="28" rx="8" fill="url(#purpleAccent)" />
+      <path d="M7 16l14 -8" stroke="#04080f" stroke-width="2.5" stroke-linecap="round" />
+      <text x="38" y="22" font-family="'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif" font-size="18" font-weight="700" fill="#f0f6fc">Med Reminder <tspan fill="#d13fff" font-size="13" font-weight="600">v2.1</tspan></text>
+    </g>
+
+    <text x="960" y="156" font-family="'JetBrains Mono', monospace" font-size="12" fill="#3fb950" text-anchor="end">● System Online · LocalStorage Synced</text>
+
+    <!-- App Content Layout -->
+    <!-- Left Column: Patient Profile & Quick Stats (width: 290) -->
+    <g transform="translate(112, 206)">
+      <rect width="280" height="494" rx="10" fill="url(#cardGrad)" stroke="#30363d" stroke-width="1" />
+
+      <!-- Profile Summary -->
+      <text x="20" y="36" font-family="'Plus Jakarta Sans', sans-serif" font-size="15" font-weight="700" fill="#f0f6fc">Patient Dashboard</text>
+      <text x="20" y="56" font-family="-apple-system, sans-serif" font-size="12" fill="#8b949e">Prescription Regimen Tracker</text>
+      
+      <line x1="20" y1="74" x2="260" y2="74" stroke="#30363d" stroke-width="1" />
+
+      <!-- Metric 1: Adherence -->
+      <g transform="translate(20, 92)">
+        <text x="0" y="14" font-family="-apple-system, sans-serif" font-size="11" fill="#8b949e" text-transform="uppercase" letter-spacing="0.5">Today's Adherence</text>
+        <text x="0" y="44" font-family="'Space Grotesk', sans-serif" font-size="28" font-weight="700" fill="#3fb950">100%</text>
+        <text x="0" y="62" font-family="-apple-system, sans-serif" font-size="11" fill="#8b949e">2 of 3 doses confirmed</text>
+      </g>
+
+      <!-- Metric 2: Next Scheduled Intake -->
+      <g transform="translate(20, 180)">
+        <text x="0" y="14" font-family="-apple-system, sans-serif" font-size="11" fill="#8b949e" text-transform="uppercase" letter-spacing="0.5">Upcoming Alert</text>
+        <text x="0" y="44" font-family="'Space Grotesk', sans-serif" font-size="28" font-weight="700" fill="#00f2fe">07:00 PM</text>
+        <text x="0" y="62" font-family="-apple-system, sans-serif" font-size="11" fill="#8b949e">Metformin 500mg with Dinner</text>
+      </g>
+
+      <!-- Storage Info Badge -->
+      <g transform="translate(20, 274)">
+        <rect width="240" height="74" rx="8" fill="#0d1117" stroke="#21262d" stroke-width="1" />
+        <text x="14" y="26" font-family="'JetBrains Mono', monospace" font-size="11" fill="#d13fff">Browser Persistence</text>
+        <text x="14" y="46" font-family="-apple-system, sans-serif" font-size="11" fill="#8b949e">Zero-Latency Client DB</text>
+        <text x="14" y="62" font-family="-apple-system, sans-serif" font-size="11" fill="#8b949e">Privacy-Preserving Local Record</text>
+      </g>
+
+      <!-- Add New Dose Button -->
+      <g transform="translate(20, 372)">
+        <rect width="240" height="42" rx="6" fill="#d13fff" />
+        <text x="120" y="26" font-family="'Plus Jakarta Sans', sans-serif" font-size="13" font-weight="700" fill="#04080f" text-anchor="middle">+ Add New Medication</text>
+      </g>
+
+      <!-- App Info -->
+      <text x="20" y="456" font-family="'JetBrains Mono', monospace" font-size="10" fill="#6e7681">Coursework: Web Systems &amp; Tech</text>
+      <text x="20" y="472" font-family="'JetBrains Mono', monospace" font-size="10" fill="#6e7681">SDCA · Department of IT</text>
+    </g>
+
+    <!-- Right Column: Medication Schedule List (width: 660) -->
+    <g transform="translate(416, 206)">
+      <rect width="664" height="494" rx="10" fill="url(#cardGrad)" stroke="#30363d" stroke-width="1" />
+
+      <!-- Section Title -->
+      <text x="24" y="36" font-family="'Plus Jakarta Sans', sans-serif" font-size="16" font-weight="700" fill="#f0f6fc">Today's Medication Schedule</text>
+      <text x="24" y="56" font-family="-apple-system, sans-serif" font-size="12" fill="#8b949e">Live prescription alarms and verified patient dose logs</text>
+
+      <!-- Dose Card 1: Completed -->
+      <g transform="translate(24, 76)">
+        <rect width="616" height="88" rx="8" fill="#0d1117" stroke="#238636" stroke-width="1.2" />
+        <circle cx="36" cy="44" r="16" fill="#1f3b25" />
+        <path d="M30 44l4 4 9-9" stroke="#3fb950" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none" />
+        
+        <text x="68" y="36" font-family="'Plus Jakarta Sans', sans-serif" font-size="15" font-weight="600" fill="#f0f6fc">Amoxicillin (500mg Capsule)</text>
+        <text x="68" y="56" font-family="-apple-system, sans-serif" font-size="12" fill="#8b949e">Instruction: 1 capsule after breakfast with water</text>
+        <text x="68" y="72" font-family="'JetBrains Mono', monospace" font-size="11" fill="#3fb950">✓ Taken at 08:02 AM · Verified Log Entry #104</text>
+
+        <rect x="510" y="28" width="86" height="30" rx="6" fill="#1f3b25" />
+        <text x="553" y="48" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="600" fill="#3fb950" text-anchor="middle">08:00 AM</text>
+      </g>
+
+      <!-- Dose Card 2: Completed -->
+      <g transform="translate(24, 180)">
+        <rect width="616" height="88" rx="8" fill="#0d1117" stroke="#238636" stroke-width="1.2" />
+        <circle cx="36" cy="44" r="16" fill="#1f3b25" />
+        <path d="M30 44l4 4 9-9" stroke="#3fb950" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none" />
+        
+        <text x="68" y="36" font-family="'Plus Jakarta Sans', sans-serif" font-size="15" font-weight="600" fill="#f0f6fc">Vitamin D3 &amp; Zinc Complex</text>
+        <text x="68" y="56" font-family="-apple-system, sans-serif" font-size="12" fill="#8b949e">Instruction: 1 softgel after lunch</text>
+        <text x="68" y="72" font-family="'JetBrains Mono', monospace" font-size="11" fill="#3fb950">✓ Taken at 01:10 PM · Verified Log Entry #105</text>
+
+        <rect x="510" y="28" width="86" height="30" rx="6" fill="#1f3b25" />
+        <text x="553" y="48" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="600" fill="#3fb950" text-anchor="middle">01:00 PM</text>
+      </g>
+
+      <!-- Dose Card 3: Pending / Alarm Active -->
+      <g transform="translate(24, 284)">
+        <rect width="616" height="88" rx="8" fill="#0d1117" stroke="#388bfd" stroke-width="1.5" />
+        <circle cx="36" cy="44" r="16" fill="#1c2d42" />
+        <circle cx="36" cy="44" r="8" fill="#388bfd" />
+        <text x="36" y="48" font-family="'JetBrains Mono', monospace" font-size="10" font-weight="700" fill="#04080f" text-anchor="middle">!</text>
+        
+        <text x="68" y="36" font-family="'Plus Jakarta Sans', sans-serif" font-size="15" font-weight="600" fill="#f0f6fc">Metformin (500mg Tablet)</text>
+        <text x="68" y="56" font-family="-apple-system, sans-serif" font-size="12" fill="#8b949e">Instruction: Take with dinner meal</text>
+        <text x="68" y="72" font-family="'JetBrains Mono', monospace" font-size="11" fill="#388bfd">⏰ Scheduled · Audio &amp; Screen Alert Pending</text>
+
+        <rect x="510" y="28" width="86" height="30" rx="6" fill="#1c2d42" />
+        <text x="553" y="48" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="600" fill="#58a6ff" text-anchor="middle">07:00 PM</text>
+      </g>
+
+      <!-- Web Tech Badges Ribbon -->
+      <g transform="translate(24, 396)">
+        <rect width="616" height="66" rx="8" fill="#0d1117" stroke="#21262d" stroke-width="1" />
+        <text x="16" y="24" font-family="'JetBrains Mono', monospace" font-size="11" fill="#8b949e">WEB ARCHITECTURE STACK</text>
+        <g transform="translate(16, 34)">
+          <rect x="0" y="0" width="76" height="22" rx="4" fill="#21262d" />
+          <text x="38" y="15" font-family="'JetBrains Mono', monospace" font-size="10" fill="#f0f6fc" text-anchor="middle">HTML5</text>
+          
+          <rect x="84" y="0" width="76" height="22" rx="4" fill="#21262d" />
+          <text x="122" y="15" font-family="'JetBrains Mono', monospace" font-size="10" fill="#f0f6fc" text-anchor="middle">CSS3</text>
+          
+          <rect x="168" y="0" width="100" height="22" rx="4" fill="#21262d" />
+          <text x="218" y="15" font-family="'JetBrains Mono', monospace" font-size="10" fill="#f0f6fc" text-anchor="middle">JavaScript ES6</text>
+          
+          <rect x="276" y="0" width="104" height="22" rx="4" fill="#21262d" />
+          <text x="328" y="15" font-family="'JetBrains Mono', monospace" font-size="10" fill="#f0f6fc" text-anchor="middle">LocalStorage API</text>
+
+          <rect x="388" y="0" width="118" height="22" rx="4" fill="#21262d" />
+          <text x="447" y="15" font-family="'JetBrains Mono', monospace" font-size="10" fill="#f0f6fc" text-anchor="middle">Web Audio API</text>
+        </g>
+      </g>
+
+    </g>
+  </g>
+</svg>
